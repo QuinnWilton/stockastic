@@ -1,0 +1,2 @@
+defmodule Stockastic do
+end
