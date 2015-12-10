@@ -1,0 +1,345 @@
+    <!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Stockastic.Orders – Stockastic v0.0.1</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="ExDoc v0.11.1">
+    <link rel="stylesheet" href="dist/app-6bc9434c82.css" />
+    <script src="dist/sidebar_items.js"></script>
+  </head>
+  <body data-type="modules">
+
+    <div class="main">
+<button class="sidebar-toggle">
+  <i class="icon-menu"></i>
+</button>
+<section class="sidebar">
+  <button class="sidebar-toggle">
+    <i class="icon-menu"></i>
+  </button>
+
+  
+  <a href="api-reference.html" class="sidebar-projectLink">
+    <div class="sidebar-projectDetails">
+      <h1 class="sidebar-projectName">
+        Stockastic
+      </h1>
+      <h2 class="sidebar-projectVersion">
+        v0.0.1
+      </h2>
+    </div>
+    
+  </a>
+
+  <div class="sidebar-search">
+    <i class="icon-search"></i>
+    <input type="text" class="sidebar-searchInput" placeholder="search" autocomplete="off" />
+  </div>
+
+  <ul class="sidebar-listNav">
+    <li><a id="extras-list" href="#full-list">Pages</a></li>
+
+    
+      <li><a id="modules-list" href="#full-list">Modules</a></li>
+    
+
+    
+
+    
+  </ul>
+
+  <ul id="full-list" class="sidebar-fullList"></ul>
+  <div class="sidebar-noResults"></div>
+</section>
+
+<section class="content">
+  <div id="content" class="content-inner">
+
+
+      <h1>
+        <small class="visible-xs">Stockastic v0.0.1</small>
+        Stockastic.Orders
+        
+        
+      </h1>
+
+      
+
+      
+        <section id="summary" class="details-list">
+          <h1 class="section-heading">
+            <a class="hover-link" href="#summary">
+              <i class="icon-link"></i>
+            </a>
+            Summary
+          </h1>
+          
+  <div class="summary-types summary">
+    <h2>
+      <a href="#types">Types</a>
+    </h2>
+    <div class="summary-row">
+  <div class="summary-signature">
+    <a href="#t:order/0">order()</a>
+  </div>
+  
+</div>
+
+  </div>
+
+
+          
+  <div class="summary-functions summary">
+    <h2>
+      <a href="#functions">Functions</a>
+    </h2>
+    <div class="summary-row">
+  <div class="summary-signature">
+    <a href="#cancel/4">cancel(venue, stock, id, client \\ %Stockastic.Client{})</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Cancel an order</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#find/4">find(venue, stock, id, client \\ %Stockastic.Client{})</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Find an order for a stock on a particular venue</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#list/3">list(venue, account, client)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>List all orders on a venue for a particular account</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#list_for_stock/4">list_for_stock(venue, account, stock, client)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>List all orders on a venue for a particular account and stock</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#place_order/4">place_order(venue, stock, body, client)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Place an order for a stock</p>
+</div>
+  
+</div>
+
+  </div>
+
+
+          
+
+          
+
+        </section>
+      
+
+      
+        <section id="types" class="types details-list">
+          <h1 class="section-heading">
+            <a class="hover-link" href="#types">
+              <i class="icon-link"></i>
+            </a>
+            Types
+          </h1>
+          <div class="types-list">
+            <div id="t:order/0" class="type-detail">
+  <pre><code class="elixir"><a href="#t:order/0">order</a> :: %{account: <a href="http://elixir-lang.org/docs/stable/elixir/String.html#t:t/0">String.t</a>, venue: <a href="http://elixir-lang.org/docs/stable/elixir/String.html#t:t/0">String.t</a>, stock: <a href="http://elixir-lang.org/docs/stable/elixir/String.html#t:t/0">String.t</a>, price: integer, qty: integer, direction: :buy | :sell, orderType: :limit | :market | :"fill-or-kill" | :"immediate-or-cancel"}</code></pre>
+  
+</div>
+
+          </div>
+        </section>
+      
+
+      
+        <section id="functions" class="details-list">
+          <h1 class="section-heading">
+            <a class="hover-link" href="#functions">
+              <i class="icon-link"></i>
+            </a>
+            Functions
+          </h1>
+          <div class="detail" id="cancel/4">
+  <div class="detail-header">
+    <a href="#cancel/4" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">cancel(venue, stock, id, client \\ %Stockastic.Client{})</span>
+      
+  </div>
+  
+    <div class="specs">
+      <h4 class="specs-title">Specs</h4>
+      <div class="specs-list">
+        
+          <pre><code class="elixir">cancel(binary, binary, integer, <a href="Stockastic.Client.html#t:t/0">Stockastic.Client.t</a>) :: <a href="Stockastic.html#t:response/0">Stockastic.response</a></code></pre>
+        
+      </div>
+    </div>
+  
+  <section class="docstring">
+    <p>Cancel an order</p>
+<h2>Example</h2>
+<pre><code class="elixir">Stockastic.Orders.cancel &quot;LOBHEX&quot;, &quot;LPEI&quot;, 1, client</code></pre>
+<p>More info at: <a href="https://starfighter.readme.io/docs/cancel-an-order">https://starfighter.readme.io/docs/cancel-an-order</a></p>
+
+  </section>
+</div>
+<div class="detail" id="find/4">
+  <div class="detail-header">
+    <a href="#find/4" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">find(venue, stock, id, client \\ %Stockastic.Client{})</span>
+      
+  </div>
+  
+    <div class="specs">
+      <h4 class="specs-title">Specs</h4>
+      <div class="specs-list">
+        
+          <pre><code class="elixir">find(binary, binary, integer, <a href="Stockastic.Client.html#t:t/0">Stockastic.Client.t</a>) :: <a href="Stockastic.html#t:response/0">Stockastic.response</a></code></pre>
+        
+      </div>
+    </div>
+  
+  <section class="docstring">
+    <p>Find an order for a stock on a particular venue</p>
+<h2>Example</h2>
+<pre><code class="elixir">Stockastic.Orders.find &quot;LOBHEX&quot;, &quot;LPEI&quot;, 1, client</code></pre>
+<p>More info at: <a href="https://starfighter.readme.io/docs/status-for-an-existing-order">https://starfighter.readme.io/docs/status-for-an-existing-order</a></p>
+
+  </section>
+</div>
+<div class="detail" id="list/3">
+  <div class="detail-header">
+    <a href="#list/3" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">list(venue, account, client)</span>
+      
+  </div>
+  
+    <div class="specs">
+      <h4 class="specs-title">Specs</h4>
+      <div class="specs-list">
+        
+          <pre><code class="elixir">list(binary, binary, <a href="Stockastic.Client.html#t:t/0">Stockastic.Client.t</a>) :: <a href="Stockastic.html#t:response/0">Stockastic.response</a></code></pre>
+        
+      </div>
+    </div>
+  
+  <section class="docstring">
+    <p>List all orders on a venue for a particular account</p>
+<h2>Example</h2>
+<pre><code class="elixir">Stockastic.Orders.list &quot;ROBUST&quot;, &quot;FOO123&quot;, client</code></pre>
+<p>More info at: <a href="https://starfighter.readme.io/docs/status-for-all-orders">https://starfighter.readme.io/docs/status-for-all-orders</a></p>
+
+  </section>
+</div>
+<div class="detail" id="list_for_stock/4">
+  <div class="detail-header">
+    <a href="#list_for_stock/4" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">list_for_stock(venue, account, stock, client)</span>
+      
+  </div>
+  
+    <div class="specs">
+      <h4 class="specs-title">Specs</h4>
+      <div class="specs-list">
+        
+          <pre><code class="elixir">list_for_stock(binary, binary, binary, <a href="Stockastic.Client.html#t:t/0">Stockastic.Client.t</a>) :: <a href="Stockastic.html#t:response/0">Stockastic.response</a></code></pre>
+        
+      </div>
+    </div>
+  
+  <section class="docstring">
+    <p>List all orders on a venue for a particular account and stock</p>
+<h2>Example</h2>
+<pre><code class="elixir">Stockastic.Orders.list &quot;ROBUST&quot;, &quot;FOO123&quot;, &quot;ROBO&quot;, client</code></pre>
+<p>More info at: <a href="https://starfighter.readme.io/docs/status-for-all-orders-in-a-stock">https://starfighter.readme.io/docs/status-for-all-orders-in-a-stock</a></p>
+
+  </section>
+</div>
+<div class="detail" id="place_order/4">
+  <div class="detail-header">
+    <a href="#place_order/4" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">place_order(venue, stock, body, client)</span>
+      
+  </div>
+  
+    <div class="specs">
+      <h4 class="specs-title">Specs</h4>
+      <div class="specs-list">
+        
+          <pre><code class="elixir">place_order(binary, binary, <a href="#t:order/0">order</a>, <a href="Stockastic.Client.html#t:t/0">Stockastic.Client.t</a>) :: <a href="Stockastic.html#t:response/0">Stockastic.response</a></code></pre>
+        
+      </div>
+    </div>
+  
+  <section class="docstring">
+    <p>Place an order for a stock</p>
+<p>Order body example:</p>
+<pre><code class="elixir">%{
+  account:   &quot;MST92145671&quot;,
+  venue:     &quot;LOBHEX&quot;,
+  stock:     &quot;LPEI&quot;,
+  qty:       100,
+  direction: :buy,
+  orderType: :market
+}</code></pre>
+<h2>Example</h2>
+<pre><code class="elixir">Stockastic.Orders.place_order &quot;LOBHEX&quot;, &quot;LPEI&quot;, body, client</code></pre>
+<p>More info at: <a href="https://starfighter.readme.io/docs/place-new-order">https://starfighter.readme.io/docs/place-new-order</a></p>
+
+  </section>
+</div>
+
+        </section>
+      
+
+      
+
+      
+        <footer class="footer">
+      <p>
+        <span class="line">
+          Built using
+          <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" rel="help" target="_blank">ExDoc</a> (v0.11.1),
+        </span>
+        <span class="line">
+          designed by
+          <a href="https://twitter.com/dignifiedquire" target="_blank" title="@dignifiedquire">Friedel Ziegelmayer</a>.
+          </span>
+      </p>
+    </footer>
+  </div>
+</section>
+</div>
+  <script src="dist/app-c7aad77d7d.js"></script>
+  </body>
+</html>
+
