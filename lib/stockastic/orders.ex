@@ -73,14 +73,14 @@ defmodule Stockastic.Orders do
 
   Order body example:
 
-    %{
-      account:   "MST92145671",
-      venue:     "LOBHEX",
-      stock:     "LPEI",
-      qty:       100,
-      direction: :buy,
-      orderType: :market
-    }
+      %{
+        account:   "MST92145671",
+        venue:     "LOBHEX",
+        stock:     "LPEI",
+        qty:       100,
+        direction: :buy,
+        orderType: :market
+      }
 
   ## Example
 
