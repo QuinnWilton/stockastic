@@ -22,8 +22,8 @@ defmodule Stockastic.Orders do
   More info at: https://starfighter.readme.io/docs/status-for-all-orders
   """
   @spec list(binary, binary, Client.t) :: Stockastic.response
-  def list(venue, account, client ) do
-    get "/venues/#{venue}/accounts/#{account}/orders", client
+  def list(venue, account, client) do
+    get "venues/#{venue}/accounts/#{account}/orders", client
   end
 
   @doc """
@@ -36,8 +36,8 @@ defmodule Stockastic.Orders do
   More info at: https://starfighter.readme.io/docs/status-for-all-orders-in-a-stock
   """
   @spec list_for_stock(binary, binary, binary, Client.t) :: Stockastic.response
-  def list_for_stock(venue, account, stock, client ) do
-    get "/venues/#{venue}/accounts/#{account}/stocks/#{stock}/orders", client
+  def list_for_stock(venue, account, stock, client) do
+    get "venues/#{venue}/accounts/#{account}/stocks/#{stock}/orders", client
   end
 
   @doc """

@@ -3,7 +3,7 @@ defmodule Stockastic.Mixfile do
 
   def project do
     [app: :stockastic,
-     version: "0.0.1",
+     version: "0.0.2",
      elixir: "~> 1.1",
      name: "Stockastic",
      description: "Simple Elixir wrapper for the Stockfighter API",

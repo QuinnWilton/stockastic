@@ -61,7 +61,7 @@ defmodule Stockastic do
   defp build_qs(kvs), do: to_string('?' ++ URI.encode_query(kvs))
 
   def authorization_header(%{access_token: token}, headers) do
-    headers ++ [{"X-Starfighter-Authorization", "token #{token}"}]
+    headers ++ [{"X-Starfighter-Authorization", token}]
   end
 
   def authorization_header(_, headers), do: headers
