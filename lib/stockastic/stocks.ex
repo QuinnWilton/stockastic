@@ -13,7 +13,7 @@ defmodule Stockastic.Stocks do
   """
   @spec list(binary, Client.t) :: Stockastic.response
   def list(venue, client) do
-    get "venues/#{venue}/stocks", client
+    get "ob/api/venues/#{venue}/stocks", client
   end
 
   @doc """
@@ -27,7 +27,7 @@ defmodule Stockastic.Stocks do
   """
   @spec orderbook(binary, binary, Client.t) :: Stockastic.response
   def orderbook(venue, stock, client) do
-    get "venues/#{venue}/stocks/#{stock}", client
+    get "ob/api/venues/#{venue}/stocks/#{stock}", client
   end
 
   @doc """
@@ -41,6 +41,6 @@ defmodule Stockastic.Stocks do
   """
   @spec get_quote(binary, binary, Client.t) :: Stockastic.response
   def get_quote(venue, stock, client) do
-    get "venues/#{venue}/stocks/#{stock}/quote", client
+    get "ob/api/venues/#{venue}/stocks/#{stock}/quote", client
   end
 end

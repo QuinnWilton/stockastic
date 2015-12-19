@@ -1,5 +1,5 @@
 defmodule Stockastic.Client do
-  defstruct auth: nil, endpoint: "https://api.stockfighter.io/ob/api/"
+  defstruct auth: nil, endpoint: "https://api.stockfighter.io"
 
   @type auth :: %{access_token: binary}
   @type t :: %__MODULE__{auth: auth, endpoint: binary}
