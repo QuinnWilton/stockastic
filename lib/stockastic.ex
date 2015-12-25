@@ -7,10 +7,11 @@ defmodule Stockastic do
   @type response :: {integer, any} | :jsx.json_term
 
   @spec process_response(HTTPoison.Response.t) :: response
-  def process_response(%HTTPoison.Response{status_code: 200, body: ""}), do: nil
-  def process_response(%HTTPoison.Response{status_code: 200, body: body}), do: JSX.decode!(body)
-  def process_response(%HTTPoison.Response{status_code: status_code, body: ""}), do: { status_code, nil }
-  def process_response(%HTTPoison.Response{status_code: status_code, body: body}), do: { status_code, JSX.decode!(body) }
+  def process_response(%HTTPoison.Response{status_code: 200, body: body}), do: parse(body)
+  def process_response(%HTTPoison.Response{status_code: status_code, body: body}), do: { status_code, parse(body) }
+
+  def parse(""), do: nil
+  def parse(body) when is_binary(body), do: JSX.decode!(body)
 
   def delete(path, client, body \\ "") do
     _request(:delete, url(client, path), client.auth, body)

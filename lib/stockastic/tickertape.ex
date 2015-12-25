@@ -10,7 +10,7 @@ defmodule Stockastic.Tickertape do
 
     def get(socket) do
       case Socket.Web.recv(socket) do
-        {:ok, {:text, text}} -> text
+        {:ok, {:text, text}} -> Stockastic.parse(text)
         {:ok, {:ping, cookie}} -> 
           Socket.Web.pong(socket, cookie || "")
           get(socket)
