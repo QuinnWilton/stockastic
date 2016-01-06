@@ -13,6 +13,6 @@ defmodule Stockastic.Venues do
   """
   @spec heartbeat(binary, Client.t) :: Stockastic.response
   def heartbeat(venue, client) do
-    get "venues/#{venue}/heartbeat", client
+    get "ob/api/venues/#{venue}/heartbeat", client
   end
 end

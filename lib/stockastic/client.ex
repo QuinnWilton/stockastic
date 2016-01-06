@@ -1,5 +1,5 @@
 defmodule Stockastic.Client do
-  defstruct auth: nil, endpoint: "https://api.stockfighter.io/ob/api/"
+  defstruct auth: nil, endpoint: "https://api.stockfighter.io"
 
   @type auth :: %{access_token: binary}
   @type t :: %__MODULE__{auth: auth, endpoint: binary}
@@ -12,11 +12,6 @@ defmodule Stockastic.Client do
 
   @spec new(auth, binary) :: t
   def new(auth, endpoint) do
-    endpoint = if String.ends_with?(endpoint, "/") do
-      endpoint
-    else
-      endpoint <> "/"
-    end
     %__MODULE__{auth: auth, endpoint: endpoint}
   end
 end

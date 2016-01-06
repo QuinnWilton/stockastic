@@ -48,7 +48,7 @@ defmodule Stockastic do
 
   @spec url(client :: Client.t, path :: binary) :: binary
   defp url(_client = %Client{endpoint: endpoint}, path) do
-    endpoint <> path
+    Path.join([endpoint, path])
   end
 
   @spec build_qs([{atom, binary}]) :: binary

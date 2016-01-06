@@ -23,7 +23,7 @@ defmodule Stockastic.Orders do
   """
   @spec list(binary, binary, Client.t) :: Stockastic.response
   def list(venue, account, client) do
-    get "venues/#{venue}/accounts/#{account}/orders", client
+    get "ob/api/venues/#{venue}/accounts/#{account}/orders", client
   end
 
   @doc """
@@ -37,7 +37,7 @@ defmodule Stockastic.Orders do
   """
   @spec list_for_stock(binary, binary, binary, Client.t) :: Stockastic.response
   def list_for_stock(venue, account, stock, client) do
-    get "venues/#{venue}/accounts/#{account}/stocks/#{stock}/orders", client
+    get "ob/api/venues/#{venue}/accounts/#{account}/stocks/#{stock}/orders", client
   end
 
   @doc """
@@ -51,7 +51,7 @@ defmodule Stockastic.Orders do
   """
   @spec find(binary, binary, integer, Client.t) :: Stockastic.response
   def find(venue, stock, id, client) do
-    get "venues/#{venue}/stocks/#{stock}/orders/#{id}", client
+    get "ob/api/venues/#{venue}/stocks/#{stock}/orders/#{id}", client
   end
 
   @doc """
@@ -65,7 +65,7 @@ defmodule Stockastic.Orders do
   """
   @spec cancel(binary, binary, integer, Client.t) :: Stockastic.response
   def cancel(venue, stock, id, client) do
-    delete "venues/#{venue}/stocks/#{stock}/orders/#{id}", client
+    delete "ob/api/venues/#{venue}/stocks/#{stock}/orders/#{id}", client
   end
 
   @doc """
@@ -90,6 +90,6 @@ defmodule Stockastic.Orders do
   """
   @spec place_order(binary, binary, order, Client.t) :: Stockastic.response
   def place_order(venue, stock, body, client) do
-    post "venues/#{venue}/stocks/#{stock}/orders", client, body
+    post "ob/api/venues/#{venue}/stocks/#{stock}/orders", client, body
   end
 end
