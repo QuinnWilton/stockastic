@@ -35,6 +35,7 @@ defmodule Stockastic.Mixfile do
       {:exjsx, "~> 3.2.0"},
       {:earmark, "~> 0.1", only: :docs},
       {:ex_doc, "~> 0.11", only: :docs},
+      {:socket, "~> 0.3.1"}
     ]
   end
 

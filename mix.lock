@@ -7,4 +7,5 @@
   "idna": {:hex, :idna, "1.0.2"},
   "jsx": {:hex, :jsx, "2.6.2"},
   "mimerl": {:hex, :mimerl, "1.0.2"},
+  "socket": {:hex, :socket, "0.3.1"},
   "ssl_verify_hostname": {:hex, :ssl_verify_hostname, "1.0.5"}}
